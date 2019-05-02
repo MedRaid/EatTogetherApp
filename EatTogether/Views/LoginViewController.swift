@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginViewController: UIViewController {
 
     
     @IBOutlet weak var email: UITextField!
@@ -39,7 +39,7 @@ class LoginController: UIViewController {
             //email is valid
         }
         
-        let user = User(_apiKey: "BMO88OD6BEXsCM7X", _Email: email.text, _Password: password.text)
+        let user = User(_apiKey: "BMO88OD6BEXsCM7X", _Email: email.text!, _Password: password.text!)
         loginVM.loginUser(request: user)
 
         
@@ -51,15 +51,26 @@ class LoginController: UIViewController {
 }
 // MARK: - PLoginVModel
 extension LoginViewController: PLoginVModel {
-    func userLogin(sender: LoginVModel, user: User?, error: BaseError?) {
+    func userLogin(sender: LoginVModel, user: User?, error: Error?) {
         if error == nil {
             print("NOOOOOOOO")
-
+            let alert = UIAlertController(title: "Success login", message: "User logged in successfully", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            // alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
 //            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
 //                self.present(vc, animated: true, completion: nil)
 //            }
         } else {
             print("YESSSSS")
+            let alert = UIAlertController(title: "Error login", message: "Please check your Email or Passeword", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+           // alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
 //            self.display(alert: Alert(baseError: error!))
         }
     }

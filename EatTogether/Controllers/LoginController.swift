@@ -16,12 +16,12 @@ class LoginController {
     private let service = LoginService()
     
     // MARK: - Public
-    func login(request: User?, completion: @escaping (_ user: User?, _ error: error?) -> Void) {
+    func login(request: User?, completion: @escaping (_ user: User?, _ error: Error?) -> Void) {
         
                 service.login(request: request, completion: {
                 user, error in
                 if user != nil {
-                    UserManager.setUser(user)
+                   // UserManager.setUser(user)
                 }
                 completion(user, error)
             })

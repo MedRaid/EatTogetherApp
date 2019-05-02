@@ -10,7 +10,7 @@
 import UIKit
 
 protocol PLoginVModel: NSObjectProtocol {
-    func userLogin(sender: LoginVModel, user: User?, error: BaseError?)
+    func userLogin(sender: LoginVModel, user: User?, error: Error?)
 }
 
 class LoginVModel {

@@ -35,14 +35,14 @@
                                         <rect key="frame" x="66" y="78" width="239" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="raid@gmail.com" placeholder="email" textAlignment="center" minimumFontSize="17" background="usernames" translatesAutoresizingMaskIntoConstraints="NO" id="T9Z-Vj-q58">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Raddaouii@gmail.com" placeholder="email" textAlignment="center" minimumFontSize="17" background="usernames" translatesAutoresizingMaskIntoConstraints="NO" id="T9Z-Vj-q58">
                                         <rect key="frame" x="42" y="311" width="289" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="azerty" placeholder="password" textAlignment="center" minimumFontSize="17" background="usernames" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Zx-FdX">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="20066789" placeholder="password" textAlignment="center" minimumFontSize="17" background="usernames" translatesAutoresizingMaskIntoConstraints="NO" id="umf-Zx-FdX">
                                         <rect key="frame" x="41" y="402" width="289" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>

@@ -14,20 +14,21 @@ class LoginService{
     
     
     
-    func login(request: LoginRequest, completion: @escaping (_ user: User?, _ error: BaseError?) -> Void) {
+    func login(request: User?, completion: @escaping (_ user: User?, _ error: Error?) -> Void) {
 
         //AlamoFire request
         
         //getting the username and password
         let parameters: Parameters=[
             "apiKey":"BMO88OD6BEXsCM7X",
-            "Email":"Raddaouii@gmail.com",
-            "Password": "20066789"
+            "Email":request!._Email,
+            "Password": request!._Password
         ]
         
         Alamofire.request(BASE_URL + login_URL,method: .post, parameters: parameters).responseJSON{ response in
             let results = response.result
-            
+            var myUser = User()
+
             
             
             // first dictionnary containing all information
@@ -36,7 +37,6 @@ class LoginService{
                 //checking the array of dictionnaries named articles
                 if let status = dict["Status"] as? String {
                     print(status)
-                
                 
                 if let BriefProfile = dict["BriefProfile"] as? Dictionary<String,AnyObject>
                     
@@ -77,11 +77,19 @@ class LoginService{
                     
                             print("=-=-=-=-=-=-=-=-=-=-=-=-")
                             print(user.isOnline)
-                }
+                            myUser = user
+                            myUser._Status = "Successful"
                 }
                 
             }
-            completion(user, nil)
+                
+            }
+            if myUser.Status == "Successful" {
+                completion(myUser, nil)
+            } else  {
+                let error = NSError(domain:"", code:401, userInfo:[ NSLocalizedDescriptionKey: "Invaild access token"])
+                completion(nil, error)
+            }
         }
     }
    
