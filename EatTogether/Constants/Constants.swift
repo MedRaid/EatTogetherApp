@@ -8,11 +8,9 @@
 
 import Foundation
 
-
+// URLS
 let BASE_URL = "http://159.65.89.34/"
-
 let login_URL = "oauth/login/apilogin"
-
 let registerURL = "oauth/login/apiregister"
 
 
