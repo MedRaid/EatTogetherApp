@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+
+let BASE_URL = "http://159.65.89.34/"
+
+let login_URL = "oauth/login/apilogin"
+
+
+
+
+
+
+
+
+//handeling the completion for the alamofire request
+typealias DownloadComplete = () -> ()
