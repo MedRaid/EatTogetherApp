@@ -13,7 +13,7 @@
         <!--Login-->
         <scene sceneID="Vcb-uf-Oq2">
             <objects>
-                <viewController id="hPH-NW-5uT" customClass="LoginController" customModule="EatTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hPH-NW-5uT" customClass="LoginViewController" customModule="EatTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cvr-bs-DTw"/>
                         <viewControllerLayoutGuide type="bottom" id="V6p-BV-Lbo"/>
